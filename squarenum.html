@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square Numbers</title>
+</head>
+<body>
+    <p>Original Array: <span id="num"></span></p>
+    <p>Squared Array: <span id="squared"></span></p>
+
+    <script>
+        // Arrow function using internal array method map()
+        const squareNums = (arr) => arr.map(num => num * num);
+
+        // Example array
+        const numbers = [11, 13, 14];
+
+        // Get squared result
+        const squared = squareNums(numbers);
+
+        // Display results in HTML
+        document.getElementById('num').textContent = numbers.join(', ');
+        document.getElementById('squared').textContent = squared.join(', ');
+    </script>
+</body>
+</html>
