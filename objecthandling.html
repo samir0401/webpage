@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Skills</title>
+</head>
+<body>
+
+  <p id="skills"></p>
+
+  <script>
+    // Create an object
+    const person = {
+      name: "Ankit",
+      age: 28,
+      skills: ["JavaScript", "React", "Node.js"]
+    };
+
+    function Details(obj) {
+      const sentence = 'Name: Ankit | Skills: Javascript,react,Node,js'
+      document.getElementById("skills").innerText = sentence;
+    }
+
+    Details(person);
+  </script>
+
+</body>
+</html>

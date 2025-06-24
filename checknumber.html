@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Number</title>
+</head>
+<body>
+
+  <h2>Check if Number is Positive, Negative, or Zero</h2>
+
+  
+<p id="result"></p>
+
+  <script>
+    function checkNumber(num) {
+      if (num > 0) {
+        return "Positive";
+      } else if (num < 0) {
+        return "Negative";
+      } else {
+        return "Zero";
+      }
+    }
+
+    let result1=checkNumber(87);
+    document.getElementById("result").innerHTML = result1;
+
+    let result2=checkNumber(-43);
+    document.getElementById("result").innerHTML = result2;
+
+    let result3=checkNumber(0);
+    document.getElementById("result").innerHTML = result3;
+</script>
+
+</body>
+</html>
