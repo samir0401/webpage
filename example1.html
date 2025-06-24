@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Variables & Data Types
+  </title>
+</head>
+<body>
+  <script>
+
+    // 1.let,conts,var
+const greeting = "Hello";
+let userName = "Samir";
+console.log(greeting + ", " + userName + "!");
+
+userName = "Prince";
+console.log(greeting + ", " + userName + "!");
+
+var age = 20;
+
+if (age >= 18) {
+  var canVote = true;
+  console.log("You are eligible to vote.");
+}
+else{
+    var canVote = false;
+   
+}
+    console.log("Voting status:", canVote);
+
+
+
+    // 2.Data type
+  let isActive = true; // Boolean
+    let score = 95.5; // Number
+    let user = {               // Object
+      name: "Samir",
+      email: "pathsamir04gmail.com"
+    };
+
+    console.log("isActive (Boolean):", isActive);
+    console.log("score (Number):", score);
+    console.log("user (Object):", user);
+    console.log("User's Name:", user.name);
+    console.log("User's Email:", user.email);
+
+
+    // 3.Types of operaters
+     let name = "Alice";               // string
+    let year = 20;                     // number
+    let fullname = { name: "Alice" };     // object
+    let value = true;              // boolean
+    let items = ["apple", "banana"];  // object (array)
+    let doSomething = function() {};  // function
+    let nothing = null;               // object (JS quirk)
+    let notDefined;                   // undefined
+
+
+    console.log("name:", typeof name);           // string
+    console.log("year:", typeof year);             // number
+    console.log("fullname:", typeof fullname);           // object
+    console.log("isActive:", typeof value);   // boolean
+    console.log("items:", typeof items);         // object (Arrays are objects)
+    console.log("doSomething:", typeof doSomething); // function
+    console.log("nothing:", typeof nothing);     // object (special case)
+    console.log("notDefined:", typeof notDefined); // undefined
+
+  </script>
+</body>
+</html>
