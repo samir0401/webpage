@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <title>FOOD CAFE</title>
+  <link rel="stylesheet" href="projectcafe.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    </head>
+        <body>
+          <input type="checkbox" id="login">
+<div class="topbar">
+    <div class="left">
+ <span>Follow On:</span>
+      <ul class="list">
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-instagram"></i></li>
+      </ul>
+    </div>
+    <div class="center">
+              <h1>FOOD CAFE</h1>
+    </div>
+    <div class="right">
+ <div class="lang">
+        <i class="fas fa-globe"></i><select>
+          <option>English</option>
+           <option>Italian</option>
+            <option>France</option>
+             <option>Spanish</option>
+              <option>German</option>
+              <option>Hindi</option>
+              <option>Gujarati</option>
+        </select>
+      </div>
+    <label for="login">LOGIN</label>
+    </div>
+</div>
+ <div class="login-panel">
+    <!-- Close Button -->
+    <label for="login" class="close-btn">&times;</label>
+    
+    <h2>LOGIN</h2>
+    
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <p class="error-msg">please fill all the details</p>
+
+    <button class="submit-btn">Submit</button>
+  </div>
+<nav class="nav">
+    <ul>
+    <div class="dropdown">
+      <a href="#">Home</a>
+      <div class="dropdown-content">
+        <a href="#">Home1</a>
+        <a href="#">Home2</a>
+        <a href="#">Home3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">About Us</a>
+      <div class="dropdown-content">
+        <a href="#">Our Team</a>
+        <a href="#">Our Story</a>
+        <a href="#">Mission</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="#">Dine</a>
+        <a href="#">Take away</a>
+        <a href="#">Reserved</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Gallery</a>
+      <div class="dropdown-content">
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Events</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Contact Us</a>
+      <div class="dropdown-content">
+        <a href="#">Email</a>
+        <a href="#">Phone</a>
+        <a href="#">Map</a>
+      </div>
+    </div>
+  
+    </ul>
+  </nav>
+   <div class="slide">
+  <div class="slider">
+   
+    <img id="slide" src="./cafefood1.jpg" alt="Image Slider"alt="Image Slider">
+    <button onclick="prevSlide()">&#10094; </button>
+    <button onclick="nextSlide()"> &#10095;</button>
+    </div>
+</div>
+<br>
+
+
+
+
+   <script>
+   const images = ["foodcafeslider2.avif", "foodcafeslider3.avif", "foodcafeslider4.avif"];
+let currentIndex = 0;
+
+function updateImage() {
+    document.getElementById("slide").src = images[currentIndex];
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+}
+
+
+function abc(item){
+  document.getElementById('sio').src=item
+}
+
+  function a(category){
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    a('all');
+   </script>
+   
+   <div class="menu">
+  <div class="main">
+  <button onclick="abc('home.jpg')">Home</button>
+  <button onclick="abc('service.webp')">Service</button>
+  <button onclick="abc('mediamaks.jpg')">Contact</button>
+</div>
+<div class="slide2">
+ <img id="sio" src="./foodcafe2.jpeg" alt="Image Slider">
+ 
+ </div>
+</div>
+
+<div class="fullmenu">
+ 
+<div class="click">
+  <div class="buttons">
+    <li  onclick="a('coffee')">Coffee</li>
+    <li onclick="a('colddrink')">Colddrink</li>
+    <li onclick="a('fastfood')">Fastfood</li>
+    <li onclick="a('tea')">Tea</li>
+    <li onclick="a('Softdrinks')">Softdrinks</li>
+  </div>
+  </div>
+
+  <div class="choose">
+    <!-- Coffee -->
+    <div class="card coffee">
+      <img src="./foodcafe4.avif" alt="Cappuccino">
+      <p>Cappuccino</p>
+    </div>
+    <div class="card coffee">
+      <img src="./foodcafe5.avif" alt="Espresso">
+      <p>Espresso</p>
+    </div>
+    <!-- Colddrink -->
+    <div class="card coffee">
+      <img src="./foodcafe6.avif" alt="Mocktails">
+      <p>Mocktails</p>
+    </div>
+    <div class="card pizza">
+      <img src="./foodcafepizza7.avif" alt="Pizza">
+      
+      <p>Pizza</p>
+    </div>
+
+
+    <!-- Colddrink -->
+    <div class="card Softdrinks">
+      <img src="./foodcafepepsi9.avif" alt="Softdrinks">
+      <p>Pepsi</p>
+    </div>
+    <div class="card colddrink">
+      <img src="food4.jpg" alt="Coke">
+      
+      <p>Coke</p>
+    </div>
+<!-- Colddrink -->
+    <div class="card colddrink">
+      <img src="food4.jpg" alt="Pepsi">
+      <p>Pepsi</p>
+    </div>
+    <div class="card colddrink">
+      <img src="food4.jpg" alt="Coke">
+      
+      <p>Coke</p>
+    </div>
+
+    <!-- Fastfood -->
+    <div class="card fastfood">
+      <img src="food6.avif" alt="Burger">
+      <p>Burger</p>
+    </div>
+    <div class="card fastfood">
+      <img src="food6.avif" alt="Pizza">
+      <p>Pizza</p>
+    </div>
+ <div class="card fastfood">
+      <img src="food6.avif" alt="Burger">
+      <p>Burger</p>
+    </div>
+    <div class="card fastfood">
+      <img src="food6.avif" alt="Pizza">
+      <p>Pizza</p>
+    </div>
+
+    <!-- Tea -->
+    <div class="card tea">
+      <img src="home.jpg" alt="Green Tea">
+      <p>Green Tea</p>
+    </div>
+    <div class="card tea">
+      <img src="home.jpg" alt="Black Tea">
+      <p>Black Tea</p>
+    </div>
+    <div class="card tea">
+      <img src="home.jpg" alt="Green Tea">
+      <p>Green Tea</p>
+    </div>
+    <div class="card tea">
+      <img src="home.jpg" alt="Black Tea">
+      <p>Black Tea</p>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="part1">
+  
+      <h2>GET IN TOUCH</h2>
+
+      <div class="form-group">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+      
+      <p class="error">Please Fill The Field</p>
+
+      <div class="form-single">
+        <input type="password" placeholder="Password">
+      </div>
+
+      <div class="form-single">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+      </div>
+      <div class="sub">
+      <button class="submit-btn">Submit</button>
+    </div>
+</div>
+</div>
+
+   
+</div>
+ <div class="co_mouse">
+  <div class="co_main">
+  
+                <div class="button-main">
+                    <button>our story</button>
+                    <button>mission</button>
+                    <button>vision</button>
+                 </div>
+                 
+  </div>             
+        </div>
+
+
+        </body>
+    
+</html>
